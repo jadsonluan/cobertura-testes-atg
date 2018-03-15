@@ -60,6 +60,17 @@ public class DieTest {
 		Die dae = new Die(6, 2);
 		die.equals(dae);
 	}
+
+	
+	@Test(expected = AssertionError.class)
+	public void testConstrutorInvalido() {
+		Die die = new Die(-1, 4); 
+	}
+	
+	@Test(expected = AssertionError.class)
+	public void testConstrutorConstrutorSidesInvalido() {
+		Die die = new Die(-1);
+	}
 	
 	@Test
 	public void testEquals3() {
