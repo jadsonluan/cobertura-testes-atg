@@ -33,6 +33,9 @@ public class DieTest {
 	public void testEquals() {
 		Die die = new Die();
 		die.equals(new Die());
+		die.equals(null);
+		die.equals(die);
+		die.equals(new Object());
 	}
 	
 	@Test

@@ -21,6 +21,12 @@ public class SinglyLinkedListImplTest {
 		list.add("Luana");
 		list.addAfter("Luan", "Luana");
 	}
+	
+	@Test
+	public void testAddAfterHeadNull() {
+		SinglyLinkedListImpl<String> list = new SinglyLinkedListImpl<>();
+		list.addAfter("Luan", "Luana");
+	}
 
 	@Test
 	public void testDeleteFront() {
@@ -30,10 +36,22 @@ public class SinglyLinkedListImplTest {
 	}
 	
 	@Test
+	public void testDeleteFrontHeadNull() {
+		SinglyLinkedListImpl<String> list = new SinglyLinkedListImpl<>();
+		list.deleteFront();
+	}
+	
+	@Test
 	public void testDeleteAfter() {
 		SinglyLinkedListImpl<String> list = new SinglyLinkedListImpl<>();
 		list.add("Luana");
 		list.add("Luan");
+		list.deleteAfter("Luana");
+	}
+	
+	@Test
+	public void testDeleteAfterHeadNull() {
+		SinglyLinkedListImpl<String> list = new SinglyLinkedListImpl<>();
 		list.deleteAfter("Luana");
 	}
 	

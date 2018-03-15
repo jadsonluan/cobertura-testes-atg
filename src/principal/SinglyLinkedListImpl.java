@@ -61,7 +61,6 @@ public class SinglyLinkedListImpl<T> {
     }
      
     public void deleteFront(){
-         
         if(head == null){
             System.out.println("Underflow...");
         }
