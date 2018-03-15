@@ -43,4 +43,21 @@ public class DieTest {
 		Die die = new Die();
 		die.toString();
 	}
+	
+	@Test(expected = AssertionError.class)
+	public void TestConstrutorResultadoMaiorLados() {
+		Die die = new Die(2, 5);
+	}
+	
+	@Test(expected = AssertionError.class)
+	public void TestConstrutorLadosInvalidos() {
+		Die die = new Die(1, 0);
+	}
+	
+	@Test
+	public void testEquals2() {
+		Die die = new Die(6, 3);
+		Die dae = new Die(6, 3);
+		die.equals(dae);
+	}
 }
