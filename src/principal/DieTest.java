@@ -57,6 +57,13 @@ public class DieTest {
 	@Test
 	public void testEquals2() {
 		Die die = new Die(6, 3);
+		Die dae = new Die(6, 2);
+		die.equals(dae);
+	}
+	
+	@Test
+	public void testEquals3() {
+		Die die = new Die(5, 3);
 		Die dae = new Die(6, 3);
 		die.equals(dae);
 	}
