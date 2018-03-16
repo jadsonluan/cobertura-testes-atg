@@ -35,7 +35,7 @@ public class SinglyLinkedListImplTest {
 		list.deleteFront();
 	}
 	
-	@Test
+	@Test(expected = NullPointerException.class)
 	public void testDeleteFrontHeadNull() {
 		SinglyLinkedListImpl<String> list = new SinglyLinkedListImpl<>();
 		list.deleteFront();
